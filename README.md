@@ -1,32 +1,35 @@
-# Election_Analysis
-Module 3: Python
-## Project Overview
-A Colorado Board of Elections employee has given us the following tasks to complete the election audit of a recent local congressional election.
+# PyPoll Challenge
 
-1. Calculate the total number of votes cast.
-2. Get a complete lit of candidates who received votes.
-3. Calculate the total number of votes each candidate received.
-4. Calculate the percentage of votes each candidate won.
-5. Determine the winner of the election based on popular vote.
+### By: Stacey Booysen
 
-## Resources
-- Data Source: election_results.csv
-- Software: Python 3.7, Visual Studio Code
 
-## Summary
-The analysis of the election show that:
-- There were 369,711 votes cast in the election.
-- The candidates were:
-    - Charles Casper Stockham
-    - Diana DeGette
-    - Raymon Anthony Doane
-- The candidate results were:
-    - Charles Casper Stockham received 23.0% of the vote and (85,213) number of votes.
-    - Diana DeGette received 73.8% of the vote and (272,892) number of votes.
-    - Raymon Anthony Doane received 3.1% of the vote and (11,606) number of votes.
-- The winner of the election was:
-    - Candidate Diana Degette, who received 73.8% of the vote and (272,892) number of votes.
-## Challenge Overview
-In this challenge, there were multiple things to consider, such as how many candidates there were, what the total votes were overall and for each person, as well as calculating all the data to present it in a more consumable way. 
-## Challenge Summary
-Overall, the challenge involved a lot of troubleshooting and reformatting. The indentations in python are very sensitive and need to be properly used to get the correct results. Once the formulas are in place, however, the coding comes together. We were able to determine that Diana DeGette was the winner of this particular election, and we were able to determine that the runner up was Charles Casper Stockham, with Raymon Anthony Doane coming in last. We succeeded in providing concise data to help the Board of Elections employee analyze the data.
+The goal in this challenge was to provide easily digestible results for an election audit. There were three main candidates and three main counties involved in the election. The task was to use ‘with’ and ‘for’ statements to help the data run together smoothly. We calculated both the total votes overall and the votes per candidate and per county. We then displayed the numbers in their percentages to help further illustrate the differences between the voting amounts.
+
+* There were a total of 369,711 votes.
+* Votes per Count:
+    *	Jefferson: 10.5% (38,855)
+    *	Denver: 82.8% (306,055)
+    *	Arapahoe: 6.7% (24,801)
+*	Denver had the highest turnout of all three counties.
+*	Votes per Candidate:
+    *	Charles Casper Stockham: 23.0% (85,213)
+    *	Diana DeGette: 73.8% (272,892)
+    *	Raymon Anthony Doane: 3.1% (11,606)
+*	The winning candidate was Diana Degette with the following vote count and percentage:
+    *	Vote Count: 272,892
+    *	Percentage: 73.8%
+    *	
+All this can be seen in the outcome of the script below:
+
+![Exampl](https://github.com/sbooysen/Election_Analysis/blob/6ad9ccc61ff41dbed8024c6fd273cb5ebf01e89a/Election%20Results%20Output.png)
+
+To modify the python script for future use, there are a few things that will need to be altered. One item that would need to be changed per the dataset, is the source file that the code is working off of. The script needs to have clear access to the new file with the new data in order to run the necessary information. An example of the code formatting for reaching these files is below:
+```
+file_to_load = os.path.join("Resources", "election_results.csv")
+# Add a variable to save the file to a path.
+file_to_save = os.path.join("analysis", "election_analysis.txt")
+```
+
+Another change that might need to be made is the addition or subtraction of loops. If only the number of votes for candidates are needed, then they would need to remove the section with the county votes. If they wanted to add more elements to the analysis, they would need to provide another loop.
+
+Overall, this is a solid base to have for running election audits. While we only used it for three candidates, it is easily adapted for use with larger datasets. With an easy-to-read outcome, the election auditor and the committee they work with, should be able to run more and more of these scripts in the future. In the end, it made everything more concise, helping the results become more clean and clear-cut for anyone to assess.
